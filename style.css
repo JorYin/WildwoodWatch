@@ -1,0 +1,268 @@
+:root{
+  --main-page-clr: #FFFCF2;
+  --secondary-page-clr: #252422;
+  --text-clr: #403D39;
+  --secondary-text-clr: #ffff;
+  --btn-clr: #EB5E28;
+  --hover-clr-main: #EB5E28;
+  --btn-hover-clr-main: #ffff;
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: var(--main-page-clr);
+  color: var(--text-clr);
+  font-family: 'Calistoga', cursive;
+}
+
+li, a, button{
+  text-decoration: none;
+  color: var(--secondary-text-clr);
+}
+
+.header{
+  background-color: var(--secondary-page-clr);
+  padding: 2rem;
+}
+
+.nav-container{
+  display: flex;  
+  position: relative;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.nav-title{
+  font-size: 1.5rem;
+  margin-right: auto;
+}
+
+.nav-items{
+  list-style: none;
+}
+
+.nav-items li{
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.nav-items li a{
+  transition: all 0.3s ease-in;
+}
+
+.nav-items li a:hover{
+  color: var(--hover-clr-main);
+}
+
+.donation-btn button{
+  margin-left: 20px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Calistoga', cursive;
+  background-color: var(--btn-clr);
+  transition: all 0.3s ease-in;
+}
+
+.donation-btn button:hover{
+  background-color: var(--btn-hover-clr-main);
+  color: var(--hover-clr-main);
+}
+
+#hero{
+  padding: 15rem 0 20rem 0;
+}
+
+.heading{
+  text-align: center;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.heading h1{
+  font-size: 3rem;
+  padding: 0.5rem;
+}
+
+.heading p{
+  font-size: 14px;
+  padding: 1rem;
+  line-height: 1rem;
+}
+
+#about-us{
+  text-align: center;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 5rem 0;
+}
+
+#about-us h1{
+  font-size: 3rem;
+}
+
+.row{
+  display: flex;
+}
+
+.first-section{
+  max-width: 1200px;
+  width: 100%;
+  margin: 2rem auto 10rem auto;
+}
+
+.first-section p{
+  font-size: 1.5rem;
+}
+
+.first-img{
+  float: right;
+  margin-left: 3rem;
+  border-radius: 10px;
+  width: 600px;
+  height: 600px;
+}
+
+.second-section{
+  max-width: 1200px;
+  width: 100%;
+  margin: 2rem auto 10rem auto;
+}
+
+.second-section p{
+  font-size: 1.5rem;
+}
+
+.second-img{
+  float: left;
+  margin-right: 3rem;
+  border-radius: 10px;
+  width: 600px;
+  height: 600px;
+}
+
+#articles{
+  text-align: center;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#articles h1{
+  font-size: 3rem;
+}
+
+#articles p{
+  margin-bottom: 3rem;
+}
+
+.article-cards{
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto 10rem auto;
+  grid-gap: 3rem;
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(3, auto);
+}
+
+.article-box {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in;
+}
+
+.article-box:hover{
+  opacity: 0.8;
+}
+
+.article-box .info {
+  position: absolute;
+  top: 0;
+  text-align: left;
+  color: var(--secondary-text-clr);
+  width: 100%;
+  padding: 20px;
+}
+
+.article-box img {
+  width: 100%;
+  height: 350px;
+  border-radius: 10px;
+}
+
+#petition-container{
+  text-align: left;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto 10rem auto;
+  padding: 2rem;
+  background-color: var(--secondary-page-clr);
+  color: var(--secondary-text-clr);
+  border-radius: 10px;
+}
+
+#petition-container h1{
+  margin-bottom: 2rem;
+}
+
+#petition-container p{
+  margin-bottom: 5rem;
+}
+
+.input-form label{
+  margin-right: 6px;
+}
+
+.input-form input{
+  padding: 4px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 12px;
+}
+
+#sign-btn{
+  margin-top: 2rem;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Calistoga', cursive;
+  background-color: var(--btn-clr);
+  transition: all 0.3s ease-in;
+}
+
+#sign-btn:hover{
+  background-color: var(--btn-hover-clr-main);
+  color: var(--hover-clr-main);
+}
+
+footer{
+  width: 100%;
+  background-color: var(--secondary-page-clr);
+  padding: 10rem;
+}
+
+.footer-items{
+  text-align: left;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  color: var(--secondary-text-clr);
+}
+
+.icons{
+  margin: 1rem auto;
+}
