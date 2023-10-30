@@ -15,7 +15,7 @@ const signEmail = document.getElementById("inputEmail");
 const countSig = document.getElementById("count-sig");
 
 // JS variables
-let count = 5;
+let count = 0;
 
 // Events
 themeButton.addEventListener("click", e =>{
@@ -38,6 +38,8 @@ function formSignatures(){
     const newPerson = document.createElement("p");
     newPerson.innerHTML = `🖊️${name} from ${homeTown} supports this`;
     signatures.insertBefore(newPerson, countSig)
+    count += 1;
+    document.getElementById("petition-count").innerHTML = count;
   }
 
 };
@@ -50,11 +52,19 @@ const validateForm = () => {
   var petitionValues = petitionInputs.elements;
 
   for (let i = 0; i < petitionValues.length; i++){
+    
     if (petitionValues[i].value.length < 2){
       containsErrors = true;
       petitionValues[i].classList.add("error");
     } else{
       petitionValues[i].classList.remove("error");
+    }
+    
+    if (!signEmail.value.includes(".com")){
+      containsErrors = true;
+      signEmail.classList.add('error');
+    } else{
+      signEmail.classList.remove('error');
     }
   }
   
