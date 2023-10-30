@@ -1,11 +1,14 @@
 :root{
   --main-page-clr: #FFFCF2;
   --secondary-page-clr: #252422;
+  --dark-page-clr: #1d1d1d;
   --text-clr: #403D39;
   --secondary-text-clr: #ffff;
   --btn-clr: #EB5E28;
   --hover-clr-main: #EB5E28;
   --btn-hover-clr-main: #ffff;
+  --error-clr: #e74c3c;
+  --error-background-clr: #fae6e6;
   scroll-behavior: smooth;
 }
 
@@ -16,9 +19,9 @@
 }
 
 .dark-mode{
-  background-color: var(--secondary-page-clr);
+  background-color: var(--dark-page-clr);
   transition: all 0.3s ease-in;
-  color: var(--text-clr);
+  color: var(--secondary-text-clr);
 }
 
 body{
@@ -161,6 +164,7 @@ li, a, button{
   border-radius: 10px;
   width: 600px;
   height: 600px;
+  box-shadow: 4px 0px 8px 0px rgba(0,0,0,.2);
 }
 
 .second-section{
@@ -179,6 +183,7 @@ li, a, button{
   border-radius: 10px;
   width: 600px;
   height: 600px;
+  box-shadow: -4px -4px 8px 0px rgba(0,0,0,.2);
 }
 
 #articles{
@@ -186,6 +191,7 @@ li, a, button{
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
+  padding-top: 5rem;
 }
 
 #articles h1{
@@ -210,6 +216,9 @@ li, a, button{
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease-in;
+  border-radius: 10px;
+  height: 350px;
+  box-shadow: 5px 0px 8px 0px rgba(0,0,0,.2);
 }
 
 .article-box:hover{
@@ -227,8 +236,12 @@ li, a, button{
 
 .article-box img {
   width: 100%;
+  object-fit: cover;
   height: 350px;
-  border-radius: 10px;
+}
+
+#petition-start{
+  padding-top: 5rem;
 }
 
 #petition-container{
@@ -241,6 +254,7 @@ li, a, button{
   background-color: var(--secondary-page-clr);
   color: var(--secondary-text-clr);
   border-radius: 10px;
+  box-shadow: 0 0px 8px 5px rgba(0,0,0,.2);
 }
 
 #petition-container-left{
@@ -249,11 +263,13 @@ li, a, button{
 
 #signatures{
   width: 35%;
+  margin: 2rem 0 2rem 0;
   text-align: center;
 }
 
 #signatures p{
-  padding-bottom: 1rem;
+  padding: 1rem 0 1rem 0;
+  font-size: 0.80rem;
 }
 
 #petition-container-left h1{
@@ -264,7 +280,7 @@ li, a, button{
   margin-bottom: 5rem;
 }
 
-.input-form label{
+label{
   margin-right: 6px;
 }
 
@@ -273,6 +289,14 @@ li, a, button{
   border: none;
   border-radius: 5px;
   margin-right: 12px;
+  font-family: 'Calistoga', cursive;
+}
+
+.error{
+  border-style: solid;
+  border-width: 2px;
+  border-color: var(--error-clr);
+  background-color: var(--error-background-clr);
 }
 
 #sign-btn{
@@ -295,6 +319,7 @@ footer{
   width: 100%;
   background-color: var(--secondary-page-clr);
   padding: 10rem;
+  box-shadow: 0 0px 8px 5px rgba(0,0,0,.2);
 }
 
 .footer-items{
