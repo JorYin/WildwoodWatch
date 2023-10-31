@@ -30,7 +30,7 @@ function formSignatures(){
   let name = signName.value;
   let homeTown = signHometown.value;
   
-  if (signatures.children.length >= 6){
+  if (signatures.children.length >= 7){
     count += 1;
     document.getElementById("petition-count").innerHTML = count;
   } 
