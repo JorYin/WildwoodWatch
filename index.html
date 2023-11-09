@@ -25,8 +25,8 @@
           </ul>
         </nav>
 
-      <button id="dark-mode-btn">Toggle Dark Mode</button>
-      <a href="https://teamtrees.org/" class="donation-btn" target="_blank"><button>Donate Now!</button></a>
+        <button id="dark-mode-btn">Toggle Dark Mode</button>
+        <a href="https://teamtrees.org/" class="donation-btn" target="_blank"><button>Donate Now!</button></a>
       </div>
     </header>
     <!--Nav End-->
@@ -43,7 +43,7 @@
     <!--Hero End-->
 
     <!--Main Text Start-->
-    <div class="main-text">
+    <div class="main-text revealable">
       
       <div id="about-us">
         <h1>About Us!</h1>
@@ -70,82 +70,85 @@
     <!--Main Text End-->
 
     <!-- Articles Start-->
+  <div class="revealable">
     <div id="articles">
       <h1>Articles</h1>
       <p>Learn More!</p>
+    </div>
       
-      <div class="article-cards">
+      <div class="article-container">
         
-        <a href="https://www.rainforest-alliance.org/insights/what-is-the-relationship-between-deforestation-and-climate-change/?network=g&device=c&c_src=MDK22VX&gad_source=1&c_src2=22vvmmembga&creative=599612048842&keyword=rainforest%20deforestation&matchtype=b" target="_blank">
-          <div class="article-box">
-            <div class="info">
-              <h1>Deforestation And Climate Change</h1>
+          <div class="article-card">
+            <a href="https://www.rainforest-alliance.org/insights/what-is-the-relationship-between-deforestation-and-climate-change/?network=g&device=c&c_src=MDK22VX&gad_source=1&c_src2=22vvmmembga&creative=599612048842&keyword=rainforest%20deforestation&matchtype=b" target="_blank">
+              <img src="https://www.rainforest-alliance.org/wp-content/uploads/2018/08/amazon-deforestation-fire-1600x1066.jpg.webp" class="photo" alt="article" />
+          </a>
+            <div class="article-info">
+              <h1>Rainforest Alliance</h1>
               <p>What is the relationship between deforestation and climate change?</p>
             </div>
-            <img src="https://www.rainforest-alliance.org/wp-content/uploads/2018/08/amazon-deforestation-fire-1600x1066.jpg.webp" class="photo" alt="article" />
           </div>  
-        </a>
 
-        <a href="https://earthobservatory.nasa.gov/features/Deforestation/deforestation_update3.php" target="_blank">
-          <div class="article-box">
-            <div class="info">
-              <h1>Tropical Deforestation</h1>
+          <div class="article-card">
+            <a href="https://earthobservatory.nasa.gov/features/Deforestation/deforestation_update3.php" target="_blank">
+              <img src="https://images.unsplash.com/photo-1535025075092-5a1cf795130b?auto=format&fit=crop&q=80&w=3008&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="photo" alt="article" />
+            </a>
+            <div class="article-info">
+              <h1>NASA</h1>
               <p>The causes of deforestation</p>
             </div>
-            <img src="https://images.unsplash.com/photo-1535025075092-5a1cf795130b?auto=format&fit=crop&q=80&w=3008&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="photo" alt="article" />
           </div>  
-        </a>
    
-        <a href="https://www.rainforest-alliance.org/insights/our-work-to-prevent-forest-fires/" target="_blank">
-          <div class="article-box">
-            <div class="info">
-              <h1>Raging Forest Fires</h1>
+          <div class="article-card">
+            <a href="https://www.rainforest-alliance.org/insights/our-work-to-prevent-forest-fires/" target="_blank">
+              <img src="https://www.rainforest-alliance.org/wp-content/uploads/2022/12/forest-fires-1600x1200.jpg.webp" class="photo" alt="article" />
+            </a>
+            <div class="article-info">
+              <h1>Rainforest Alliance</h1>
               <p>About our work to prevent forest fires!</p>
             </div>
-            <img src="https://www.rainforest-alliance.org/wp-content/uploads/2022/12/forest-fires-1600x1200.jpg.webp" class="photo" alt="article" />
-          </div>  
-        </a>
-
-    </div>
-    
+          </div>
+      </div>
     </div>
     <!-- Articles End-->
 
     <!-- Petition Start-->
-    <div id="petition-start"></div>
-    <div id="petition-container">
-      
-      <div id="petition-container-left">
+  <div class="revealable">
+    <div id="petition-start">
+      <div id="petition-container">
         
-        <h1>Sign Our Petition!</h1>
-        <div id="petition-info">
-          <p>Join WildwoodWatch in urging governments and organizations worldwide to prioritize the preservation of our forests. Sign our petition to call for stricter regulations against deforestation, sustainable land use policies, and international cooperation to combat climate change.</p>
-        </div>
-  
-          <form id="form-sign">
-              <label for="inputName">Name:</label>     
-              <input class="inputField" id="inputName" type="text" placeholder="John Doe">
-    
-              <label for="inputHometown">Hometown:</label>     
-              <input class="inputField" id="inputHometown" type="text" placeholder="Texas">
-    
-              <label for="inputEmail">Email:</label>     
-              <input class="inputField" id="inputEmail" type="email" placeholder="JohnDoe@gmail.com">
-          </form>
+        <div id="petition-container-left">
           
-          <button id="sign-btn" type="submit">Sign Now!</button>
-      
-        </div>
+          <h1>Sign Our Petition!</h1>
+          <div id="petition-info">
+            <p>Join WildwoodWatch in urging governments and organizations worldwide to prioritize the preservation of our forests. Sign our petition to call for stricter regulations against deforestation, sustainable land use policies, and international cooperation to combat climate change.</p>
+          </div>
     
-      <div id="signatures">
+            <form id="form-sign">
+                <label for="inputName">Name:</label>     
+                <input class="inputField" id="inputName" type="text" placeholder="John Doe">
+      
+                <label for="inputHometown">Hometown:</label>     
+                <input class="inputField" id="inputHometown" type="text" placeholder="Texas">
+      
+                <label for="inputEmail">Email:</label>     
+                <input class="inputField" id="inputEmail" type="email" placeholder="JohnDoe@gmail.com">
+            </form>
+            
+            <button id="sign-btn" type="submit">Sign Now!</button>
         
-        <div id="count-sig">
-          <p>🖊️ <label id="petition-count">0</label> people have signed this petition and support this cause.</p>
+          </div>
+      
+        <div id="signatures">
+          
+          <div id="count-sig">
+            <p>🖊️ <label id="petition-count">0</label> people have signed this petition and support this cause.</p>
+          </div>
+          
         </div>
-        
-      </div>
 
+      </div>
     </div>
+  </div>
     <!-- Petition End-->
 
     <!-- Footer Start-->

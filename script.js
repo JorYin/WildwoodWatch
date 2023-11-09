@@ -11,11 +11,24 @@ const signName = document.getElementById("inputName");
 const signHometown = document.getElementById("inputHometown");
 const signEmail = document.getElementById("inputEmail");
 
+// Sections
+const revealableContainers = document.querySelectorAll(".revealable")
+
+
 // Counter
 const countSig = document.getElementById("count-sig");
 
 // JS variables
 let count = 0;
+
+let animation = {
+  revealDistance : 150,
+  initialOpacity : 0,
+  transitionDelay : 0,
+  transitionDuration : '2s',
+  transitionProperty : 'all',
+  transitionTimingFunction : 'ease'
+} 
 
 // Events
 themeButton.addEventListener("click", e =>{
@@ -23,6 +36,8 @@ themeButton.addEventListener("click", e =>{
 
   document.body.classList.toggle("dark-mode");
 });
+
+window.addEventListener("scroll", reveal);
 
 
 // Functions
@@ -43,6 +58,26 @@ function formSignatures(){
   }
 
 };
+
+function reveal() {
+
+  for (let i = 0; i < revealableContainers.length; i++){
+    let windowHeight = window.innerHeight;
+
+    let topOfRevealableContainer = revealableContainers[i].getBoundingClientRect().top;
+
+    if (topOfRevealableContainer < windowHeight - animation.revealDistance) {
+      /* add the active class to the revealableContainer's classlist */
+      revealableContainers[i].classList.add("active")
+    } else {
+      /* remove the active class to the revealableContainer's classlist */
+      revealableContainers[i].classList.remove("active")
+    }
+
+  }
+
+
+}
 
 // TODO: Complete validation form
 
