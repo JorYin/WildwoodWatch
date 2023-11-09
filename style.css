@@ -47,7 +47,6 @@ li, a, button{
 
 .nav-container{
   display: flex;  
-  position: relative;
   justify-content: flex-end;
   align-items: center;
   max-width: 1200px;
@@ -108,6 +107,13 @@ li, a, button{
 #dark-mode-btn:hover{
   background-color: var(--btn-hover-clr-main);
   color: var(--secondary-page-clr);
+}
+
+.nav-icons{
+  font-size: 2rem;
+  color: var(--secondary-text-clr);
+  cursor: pointer;
+  display: none;
 }
 
 #hero{
@@ -351,18 +357,23 @@ label{
 
 /* box that contains all the content and images */
 .modal-content {
-  background-color: lightsteelblue; /* update the colors and font sizes as you like */
-  color: black;
+  background-color: var(--dark-page-clr); /* update the colors and font sizes as you like */
+  color: var(--secondary-text-clr);
   text-align: center;
-  font-size: 3rem;
+  font-size: 1.5rem;
   display: flex; /* adds flexbox to center all items */
   justify-content: center;
   align-items: center;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 0px 8px 5px rgba(0,0,0,.2);
 }
 
 .modal-content img{
   width: 300px;
   height: 300px;
+  border-radius: 6px;
+  box-shadow: 0 0px 8px 5px rgba(0,0,0,.2);
 }
 
 #thanks-modal-content {
@@ -374,6 +385,23 @@ label{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 1rem;
+}
+
+#close-modal{
+  margin-top: 1rem;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Calistoga', cursive;
+  background-color: var(--btn-clr);
+  transition: all 0.3s ease-in;
+}
+
+#close-modal:hover{
+  background-color: var(--btn-hover-clr-main);
+  color: var(--hover-clr-main);
 }
 
 footer{
@@ -392,7 +420,8 @@ footer{
 }
 
 .icons{
-  margin: 1rem auto;
+  margin: 2rem auto;
+  font-size: 4rem;
 }
 
 .revealable{
@@ -465,19 +494,21 @@ footer{
 }
 
 @media (max-width: 992px) {
-  .nav-items{
+  .nav-container .nav-items,
+  .nav-container #dark-mode-btn,
+  .nav-container .donation-btn{
+
     display: none;
+
   }
   
-  .donation-btn button{
-    display: none;
-  }
-  
-  #dark-mode-btn{
-    display: none;
+  .nav-icons #menu-icon{
+    display: block;
   }
 
-
+  #close-icon{
+    display: none;
+  }
 
 }
 
