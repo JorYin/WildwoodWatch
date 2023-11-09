@@ -17,7 +17,7 @@ const modalImage = document.getElementById("modalImg")
 
 // Sections
 const revealableContainers = document.querySelectorAll(".revealable")
-
+const darkHero = document.querySelector(".background-container")
 
 // Counter
 const countSig = document.getElementById("count-sig");
@@ -40,8 +40,11 @@ let animation = {
 themeButton.addEventListener("click", e =>{
   e.preventDefault();
 
+  darkHero.classList.toggle("dark-mode-background");
+  
   document.body.classList.toggle("dark-mode");
   
+
 });
 
 window.addEventListener("scroll", reveal);
