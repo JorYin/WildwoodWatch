@@ -46,17 +46,18 @@ li, a, button{
 }
 
 .nav-container{
+  width: 100%;
+  max-width: 1200px;
   display: flex;  
   justify-content: flex-end;
   align-items: center;
-  max-width: 1200px;
-  width: 100%;
   margin: 0 auto;
 }
 
 .nav-title{
   font-size: 1.5rem;
   margin-right: auto;
+  transition: all 0.3s ease-in;
 }
 
 .nav-items{
@@ -113,6 +114,13 @@ li, a, button{
   font-size: 2rem;
   color: var(--secondary-text-clr);
   cursor: pointer;
+}
+
+#menu-icon{
+  display: none;
+}
+
+#close-icon{
   display: none;
 }
 
@@ -259,7 +267,6 @@ li, a, button{
 }
 
 .article-card img {
-  width: 100%;
   object-fit: cover;
   height: 350px;
 }
@@ -283,7 +290,8 @@ li, a, button{
 }
 
 #petition-start{
-  padding: 5rem;
+  padding: 5rem 0 5rem 0;
+  margin: 0 2rem 0 2rem;
 }
 
 #petition-container{
@@ -511,15 +519,12 @@ footer{
 }
 
 @media (max-width: 992px) {
-  .nav-container .nav-items,
-  .nav-container #dark-mode-btn,
-  .nav-container .donation-btn{
-
-    display: none;
-
-  }
   
-  .nav-icons #menu-icon{
+  .nav-items{
+    display: none;
+  }
+
+  #menu-icon{
     display: block;
   }
 
@@ -527,16 +532,239 @@ footer{
     display: none;
   }
 
+  .nav-items-mobile{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--dark-page-clr);
+    top: 68px;
+    left: 0;
+    list-style: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+    transform: translateY(-200%);
+    transition: all 1.5s ease;
+    z-index: 999;
+  }
+
+  .nav-items-mobile li{
+    margin: 1rem 0 1rem 0;
+    padding: 1rem;
+    font-size: 3rem;
+  }
+
+  .nav-items-active{
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .nav-items-mobile ul li {
+    display: block;
+    padding: 2rem;
+    font-size: 2rem;
+    margin-top: 2rem;
+  }
+
+  .donation-btn button{
+    margin: 0 20px 0 20px;
+    padding: 10px 15px;
+    font-size: 0.8rem;
+  }
+  
+  #dark-mode-btn{
+    margin: 0 0 0 20px;
+    padding: 10px 15px;
+    font-size: 0.8rem;
+  }
+  
+  .article-container{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    grid-gap: 3rem;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem 0 2rem;
+  }
+  
+  .article-card {
+    position: relative;
+    transition: all 0.3s;
+    overflow: hidden;
+    border-radius: 10px;
+    height: 350px;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 0px 8px 5px rgba(0,0,0,.2);
+  }
+  
+  .article-card img {
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .article-info h1 {
+    font-size: 2rem
+  }
+  
+  #petition-container-left{
+    width: 60%;
+    text-align: center;
+  }
+
+  #petition-container-left #form-sign{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+  }
+  
+  #signatures{
+    width: 40%;
+  }
+  
+  #petition-container-left h1{
+    margin-bottom: 2rem;
+  }
+  
+  #petition-container-left p{
+    margin-bottom: 2rem;
+  }
+  
+  label{
+    margin-right: 0px;
+  }
+  
+  .inputField {
+    padding: 6px;
+    margin: 0.5rem;
+  }
+
 }
 
 @media (max-width: 768px) {
+  .nav-items-mobile{
+    top: 62px;
+  }
+  
+  .first-section,
+  .second-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .first-img,
+  .second-img {
+    width: 100%; 
+    order: -1; 
+    float: none;
+    margin: 1rem auto 1rem auto;
+  }
+
+  .nav-title{
+    font-size: 1.25rem;
+  }
+
+  .donation-btn button{
+    margin: 0 10px 0 10px;
+    padding: 10px 15px;
+    font-size: 0.6rem;
+  }
+  
+  #dark-mode-btn{
+    margin: 0 0 0 20px;
+    padding: 10px 15px;
+    font-size: 0.6rem;
+  }
+
+  #petition-container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  #petition-container-left{
+    width: 100%;
+    text-align: center;
+  }
+
+  #petition-container-left #form-sign{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  
+  #signatures{
+    width: 100%;
+  }
+  
+  #petition-container-left h1{
+    margin-bottom: 2rem;
+  }
+  
+  #petition-container-left p{
+    margin-bottom: 2rem;
+  }
+  
+  label{
+    margin-right: 0px;
+  }
+  
+  .inputField {
+    padding: 6px;
+    margin: 0.5rem;
+  }
+
+  footer{
+    width: 100%;
+    background-color: var(--secondary-page-clr);
+    padding: 10rem 2rem 10rem 2rem;
+    box-shadow: 0 0px 8px 5px rgba(0,0,0,.2);
+  }
+  
+  .footer-items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-items h1, .footer-items h2{
+    font-size: 1rem;
+  }
+  
+  .icons{
+    margin: 1rem;
+    font-size: 2rem;
+  }
 
 }
 
 @media (max-width: 480px) {
 
+  .nav-title{
+    font-size: 1rem;
+  }
+
+  .donation-btn button{
+    font-size: 0.35rem;
+  }
+  
+  #dark-mode-btn{
+    font-size: 0.35rem;
+  }
+
 }
 
 @media (max-width: 320px) {
+  
+  .donation-btn button{
+    font-size: 0.3rem;
+  }
+  
+  #dark-mode-btn{
+    font-size: 0.3rem;
+  }
 
 }
