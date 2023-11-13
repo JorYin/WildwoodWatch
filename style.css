@@ -601,6 +601,11 @@ footer{
   .article-info h1 {
     font-size: 2rem
   }
+
+  .article-card:hover{
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
   
   #petition-container-left{
     width: 60%;
@@ -711,6 +716,20 @@ footer{
     margin: 0.5rem;
   }
 
+  /* box that contains all the content and images */
+  .modal-content {
+    font-size: 1rem;
+  }
+
+  .modal-content img{
+    width: 200px;
+    height: 200px;
+  }
+
+  #thanks-modal-content {
+    width: 12rem; /* sets a default width for the text container */
+  }
+  
   footer{
     width: 100%;
     background-color: var(--secondary-page-clr);
@@ -736,6 +755,18 @@ footer{
 }
 
 @media (max-width: 480px) {
+
+    /* box that contains all the content and images */
+    .modal-content {
+      flex-direction: column;
+      font-size: 1rem;
+    }
+  
+    .modal-content img{
+      width: 200px;
+      height: 200px;
+      order: -1;
+    }
 
   .nav-title{
     font-size: 1rem;
