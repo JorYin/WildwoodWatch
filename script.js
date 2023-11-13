@@ -150,10 +150,14 @@ function scaleImage() {
 
 function closeMenuLinks(links) {
   links.addEventListener("click", e => {
-    navBarMobile.classList.remove('nav-items-active');
+    
+    navBarMobile.classList.remove("nav-items-active");
+    
     hamMenu.style.display = "block";
+    
     closeHamMenu.style.display = "none";
-  })
+
+  });
 }
 
 // Form validation

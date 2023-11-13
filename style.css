@@ -126,7 +126,7 @@ li, a, button{
 
 .hero{
   position: relative;
-  padding: 23rem 0 20rem 0;
+  padding: 19rem 0 19rem 0;
 }
 
 .background-container {
@@ -543,16 +543,10 @@ footer{
     text-align: center;
     display: flex;
     flex-direction: column;
-    opacity: 1;
+    opacity: 0;
     transform: translateY(-200%);
     transition: all 1.5s ease;
     z-index: 999;
-  }
-
-  .nav-items-mobile li{
-    margin: 1rem 0 1rem 0;
-    padding: 1rem;
-    font-size: 3rem;
   }
 
   .nav-items-active{
@@ -560,11 +554,10 @@ footer{
     transform: translateY(0);
   }
 
-  .nav-items-mobile ul li {
-    display: block;
-    padding: 2rem;
-    font-size: 2rem;
-    margin-top: 2rem;
+  .nav-items-mobile li{
+    margin: 2rem 0 2rem 0;
+    padding: 1rem;
+    font-size: 3rem;
   }
 
   .donation-btn button{
@@ -667,6 +660,7 @@ footer{
   .nav-title{
     font-size: 1.25rem;
   }
+
 
   .donation-btn button{
     margin: 0 10px 0 10px;
