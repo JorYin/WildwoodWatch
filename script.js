@@ -21,6 +21,8 @@ const navBarMobile = document.querySelector(".nav-items-mobile")
 // Sections
 const revealableContainers = document.querySelectorAll(".revealable")
 const darkHero = document.querySelector(".background-container")
+const secondSection = document.querySelector(".second-section-background")
+const petitionSection = document.querySelector(".petition-start")
 const navLinks = document.querySelectorAll('.nav-items-mobile ul li a');
 
 // Counter
@@ -44,8 +46,13 @@ let animation = {
 themeButton.addEventListener("click", e =>{
 
   darkHero.classList.toggle("dark-mode-background");
+
+  secondSection.classList.toggle("second-section-background-dark");
+
+  petitionSection.classList.toggle("petition-start-dark");
   
   document.body.classList.toggle("dark-mode");
+
   
 });
 

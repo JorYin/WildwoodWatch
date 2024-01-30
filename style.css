@@ -9,6 +9,8 @@
   --btn-hover-clr-main: #ffff;
   --error-clr: #e74c3c;
   --error-background-clr: #fae6e6;
+  --section-clr: #f6f3e9;
+  --section-clr-drk: #212121;
   scroll-behavior: smooth;
 }
 
@@ -181,10 +183,14 @@ li, a, button{
   display: flex;
 }
 
+.first-section-background{
+  padding: 1rem 2rem 3rem 2rem;
+}
+
 .first-section{
   max-width: 1200px;
   width: 100%;
-  margin: 2rem auto 10rem auto;
+  margin: 1rem auto 3rem auto;
   padding: 0 2rem 0 2rem;
 }
 
@@ -203,10 +209,19 @@ li, a, button{
   box-shadow: 0 0px 8px 5px rgba(0,0,0,.2);
 }
 
+.second-section-background{
+  padding: 3rem 2rem 3rem 2rem;
+  background-color: var(--section-clr);
+}
+
+.second-section-background-dark{
+  background-color: var(--section-clr-drk);
+}
+
 .second-section{
   max-width: 1200px;
   width: 100%;
-  margin: 2rem auto 10rem auto;
+  margin: 3rem auto 3rem auto;
   padding: 0 2rem 0 2rem;
 }
 
@@ -289,8 +304,16 @@ li, a, button{
   font-size: 2rem
 }
 
-#petition-start{
+.petition-start{
   padding: 5rem 0 5rem 0;
+  background-color: var(--section-clr);
+}
+
+.petition-start-dark{
+  background-color: var(--section-clr-drk);
+}
+
+.petition-margin{
   margin: 0 2rem 0 2rem;
 }
 
