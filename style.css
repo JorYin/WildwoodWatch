@@ -304,7 +304,7 @@ li, a, button{
   font-size: 2rem
 }
 
-.petition-start{
+#petition-start{
   padding: 5rem 0 5rem 0;
   background-color: var(--section-clr);
 }
