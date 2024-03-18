@@ -304,12 +304,12 @@ li, a, button{
   font-size: 2rem
 }
 
-#petition-start{
+.petition-background{
   padding: 5rem 0 5rem 0;
   background-color: var(--section-clr);
 }
 
-.petition-start-dark{
+.petition-background-dark{
   background-color: var(--section-clr-drk);
 }
 
